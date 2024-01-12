@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+    <h2>Payment Form</h2>
+    <form action="/submit-payment-form" method="post">
+
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name" required>
+
+        <label for="Area_Location">Area_Location:</label>
+        <select id="Area_Location" name="Area_Location" required>
+            <option value="" disabled selected>None</option>
+            <option value="Karen">Karen</option>
+            <option value="south-B">south-B</option>
+            <option value="Thika-Road">Thika-Road</option>
+        </select>
+
+        <label for="Payment_category">Payment_category:</label>
+        <select id="Payment_category" name="Payment_category" required>
+            <option value="" disabled selected>None</option>
+            <option value="New_plan">New plan</option>
+            <option value="Current_plan">Current plan</option>
+            <option value="Upgrade">Upgrade</option>
+        </select>
+
+        <label for="Payment_option">Payment_option:</label>
+        <select id="Payment_option" name="Payment_option" onchange="updatePlaceholder()" required>
+            <option value="" disabled selected>None</option>
+            <option value="M-pesa">M-pesa</option>
+            <option value="Mastercard/Visa">Mastercard/Visa</option>
+            <option value="Paypal">Paypal</option>
+        </select>
+
+        <label for="payment">payment:</label>
+        <input type="text" id="payment" name="payment" required>
+        <button type="submit">Submit Payment</button>
+    </form>
+
+    <script>
+        function updatePlaceholder() {
+            var paymentOption = document.getElementById("Payment_option").value;
+            var paymentInput = document.getElementById("payment");
+
+            if (paymentOption === "M-pesa") {
+                paymentInput.placeholder = "Enter your M-Pesa number";
+                paymentInput.pattern = "[0-9]{10}";
+            } else if (paymentOption === "Mastercard/Visa") {
+                paymentInput.placeholder = "Enter your card number";
+                paymentInput.pattern = "[0-9]{15}";
+            } else if (paymentOption === "Paypal") {
+                paymentInput.placeholder = "Enter your Paypal email";
+                paymentInput.pattern = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}";
+            } else {
+                paymentInput.placeholder = "Enter your card number";
+            }
+        }
+    </script>
+</body>
+
+</html>

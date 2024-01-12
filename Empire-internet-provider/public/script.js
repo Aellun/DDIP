@@ -7,7 +7,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         message: document.getElementById('message').value
     };
 
-    fetch('/submit-form', {
+    fetch('/submit-contact-form', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

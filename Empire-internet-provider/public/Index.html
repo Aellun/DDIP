@@ -50,7 +50,14 @@
                     <li>Internet surfing, <br>social media & email</li>
                     <li>SD Movie & music streaming</li>
                 </ul>
-                <button class="buy-button">Buy</button>
+                <button class="buy-button" onclick="redirectToPayment()">Buy</button>
+
+                <script>
+                    function redirectToPayment() {
+                        // Redirect to the payment page
+                        window.location.href = '/payment';
+                    }
+                </script>
             </div>
             <div class="plan">
                 <div class="plan-title">
@@ -67,7 +74,15 @@
                     <li>Superfast video downloads</li>
                     <li>CCTV devices Capability</li>
                 </ul>
-                <button class="buy-button">Buy</button>
+                <button class="buy-button" onclick="redirectToPayment()">Buy</button>
+
+                <script>
+                    function redirectToPayment() {
+                        // Redirect to the payment page
+                        window.location.href = '/payment';
+                    }
+                </script>
+
             </div>
             <div class="plan">
                 <div class="plan-title">
@@ -89,26 +104,34 @@
                     <li>Online gaming and downloading</li>
 
                 </ul>
-                <button class="buy-button">Buy</button>
+                <button class="buy-button" onclick="redirectToPayment()">Buy</button>
+
+                <script>
+                    function redirectToPayment() {
+                        // Redirect to the payment page
+                        window.location.href = '/payment';
+                    }
+                </script>
             </div>
         </div>
     </section>
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions or need assistance? Contact our support team.</p>
-        <form id="contactForm" action="/submit-form" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <h2>Contact Us</h2>
+    <p>Have questions or need assistance? Contact our support team.</p>
+    <form id="contactForm" action="/submit-contact-form" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
 
     <footer>
         <p>&copy; 2023 Empire Internet. All rights reserved.</p>
