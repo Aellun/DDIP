@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const port = process.env.PORT || 3004;
+const port = process.env.PORT || 3000;
 
 // Temporary storage for messages
 let messages = [];
@@ -13,8 +13,8 @@ let messages = [];
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'empireinternet602@gmail.com', // Your email address
-        pass: 'lzfaqnydgzjzrfst' // Your email password
+        user: 'empireinternet602@gmail.com', 
+        pass: 'lzfaqnydgzjzrfst'
     }
 });
 
@@ -34,7 +34,7 @@ app.get('/payment', (req, res) => {
 app.post('/submit-contact-form', async (req, res) => {
     const { name, email, message } = req.body;
 
-    // Store the form submission (you would replace this with database logic)
+    // Store the form submission
     messages.push({ name, email, message });
 
     // Send email for contact form
@@ -62,7 +62,7 @@ app.post('/submit-payment-form', async (req, res) => {
     console.log('Form submitted:',formData);
     const { Name, Area_Location, Payment_category, Payment_option, payment, cardNumber, Mpesanumber, PaypalEmail } = req.body;
 
-    // Store the form submission (you would replace this with database logic)
+    // Store the form submission
     messages.push({ Name, Area_Location, Payment_category, Payment_option, payment, cardNumber, Mpesanumber, PaypalEmail });
 
     // Send email for payment form
