@@ -11,10 +11,9 @@
         <h1>Weather Forecast</h1>
         <input type="text" id="locationInput" placeholder="Enter city name" spellcheck="false">
         <button id="searchButton">Search</button>
-        <!-- <img id="weatherImage" src="/imageUrl" alt="Weather Condition Image"> -->
         
-        <div class="Weather">
-            <img src="images/rain.png"class="weather-icon">
+        <div class="main-weather">
+            <img src="images/rain.png" class="weather-icon">
             <p class="weather-description"></p>
             <h1 class="temp">22°C</h1>
             <h2 class="city">Nairobi</h2>
@@ -26,7 +25,6 @@
                         <p> Humidity</p>
                     </div>
                 </div>
-
                 <div class="col">
                     <img src="images/wind.png">
                     <div>
@@ -36,6 +34,12 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Forecast Container -->
+    <div class="forecast-container">
+        <!-- Forecast items will be dynamically added here -->
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
