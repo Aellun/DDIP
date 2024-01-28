@@ -1,27 +1,41 @@
-/* Reset and general styling for the body */
 body {
     font-family: Arial, sans-serif;
     background-image: url('bg1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
+    
+    flex-direction: row;
 }
 
-/* Styling for the main container */
-.container {
+.mainContainer {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    align-items: center; /* Adjust as needed */
+    height: 100vh;
+}
+
+.container,
+.three-hour-forecast,
+.four-day-forecast {
     max-width: 400px;
-    margin: 0;
     text-align: center;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-top: 50px;
-    height: 65%;
+    height: 100vh;
 }
+
+.container {
+    margin-top: 0px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
 
 /* Styling for heading */
 h1 {
@@ -98,61 +112,73 @@ button {
     font-size: 18px;
 }
 
-/* Styling for the three-hour forecast container */
-.three-hour-forecast-container {
-    max-width: 400px;
-    flex: 1;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-left: 10px; /* Adjust margin as needed */
-}
+/* Adjusted styles for .three-hour-forecast*/
+.three-hour-forecast
+ {
+    margin-left: 0px; 
+    margin-top: 0px;
+    padding: 45px;
+    
+
 
 /* Styling for forecast items */
 .forecast-item {
     flex: 1;
     text-align: center;
+    margin-top: 10px;
+    
 }
 
 /* Styling for images in forecast items */
 .forecast-item img {
-    width: 50px;
+    width: 140px;
     margin-top: 10px;
+    font-size: 35px;
+    
 }
 
 /* Styling for forecast hour and temperature */
 .forecast-hour, .forecast-temp {
-    font-size: 14px;
+    font-size: 18px;
     margin: 5px 0;
+    font-weight: 400;
+    margin-top: 55px;
 }
 
-/* Styling for the four-day forecast container */
-.four-day-forecast-container {
-    flex: 1;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-left: 10px; /* Adjust margin as needed */
+
+
+}
+.four-day-forecast{
+margin-right: 10px;
+margin-top: 100px;
+padding: 45px;
+
 }
 
 /* Styling for four-day forecast items */
 .four-day-forecast-item {
     flex: 1;
-    text-align: center;
+    text-align: left;
+    margin-top: 10px;
 }
 
 /* Styling for images in four-day forecast items */
-.four-day-forecast-item img {
-    width: 50px;
-    margin-top: 10px;
+.forecast-item img {
+    width: 100px;
+    margin-top: 1px;
 }
 
 /* Styling for four-day forecast date and temperature */
 .four-day-forecast-date, .four-day-forecast-temp {
     font-size: 14px;
-    margin: 5px 0;
+    margin: 0;
 }
+
+/* Styles for headers
+.three-hour-forecast h2
+ {
+    margin-bottom: 10px;
+}
+.four-day-forecast h2{
+    margin-bottom: 5px;
+} */
